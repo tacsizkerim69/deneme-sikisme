@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karşılama Ekranı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="screen1" class="screen active">
+        <div class="container">
+            <input type="text" id="usernameInput" class="styled-input" placeholder="İsminizi girin...">
+            <button id="submitBtn" class="styled-btn">ONAYLA</button>
+        </div>
+    </div>
+
+    <div id="screen2" class="screen">
+        <div class="container">
+            <button id="youtubeBtn" class="styled-btn link-btn">YouTube'a Git</button>
+            <button id="googleBtn" class="styled-btn link-btn">Google'a Git</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

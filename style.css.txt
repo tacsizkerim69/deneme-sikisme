@@ -1,0 +1,92 @@
+/* Genel Ayarlar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Kaydırma çubuklarını gizle */
+}
+
+/* Ekranların temel yapısı */
+.screen {
+    height: 100vh;
+    width: 100vw;
+    display: none; /* Başlangıçta tüm ekranlar gizli */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+/* Aktif olan ekranı göster */
+.screen.active {
+    display: flex;
+}
+
+/* 1. Ekran (Giriş) Stilleri */
+#screen1 {
+    background-color: #1a1a1a; /* İstediğin karanlık arka plan */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Elemanlar arası boşluk */
+}
+
+/* Samsung gibi yuvarlak kenarlı kutular için ortak stil */
+.styled-input,
+.styled-btn {
+    border: none;
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 350px; /* Kutuların genişliği */
+    border-radius: 25px; /* İstediğin dairesel (yuvarlak) köşe */
+    text-align: center;
+}
+
+/* İsim Giriş Kutusu */
+.styled-input {
+    background-color: white;
+    color: #333;
+}
+
+/* Giriş kutusu içindeki soluk yazı */
+.styled-input::placeholder {
+    color: #a0a0a0; /* Şeffaf gri yazı */
+    opacity: 0.8;
+}
+
+/* Butonlar */
+.styled-btn {
+    background-color: #007bff; /* Mavi renk */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.styled-btn:hover {
+    transform: scale(1.03); /* Buton üzerine gelince hafifçe büyüsün */
+}
+
+
+/* 2. Ekran (Linkler) Stilleri */
+#screen2 {
+    /*
+      ÖNEMLİ: Buranın çalışması için 'bayrak.jpg' adında bir Türk bayrağı resmini
+      bu CSS dosyası ve index.html ile aynı klasöre koymalısın!
+    */
+    background-image: url('bayrak.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Link butonlarının rengi zaten .styled-btn'den mavi geliyor */
+.link-btn {
+    /* İstersen burada ekstra ayar yapabilirsin */
+}
